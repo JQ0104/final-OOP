@@ -1,42 +1,71 @@
-import java.util.Scanner;
+/**
+ * @(#)User.java
+ *
+ *
+ * @author 
+ * @version 1.00 2024/9/8
+ */
+import java.util.Objects;
+import java.util.List;
 
-public class User {
-    private String name;
-    private String cardNumber;
-    private double balance;
-
-    public User(String name, double balance) {
-        this.name = name;
-        this.balance = balance;
-        this.cardNumber = getCardNumberFromUser();
+public abstract class User {
+	private String name;
+	private String telNo;
+	private String email;
+	
+	//constructors
+    public User() {
+    	this("","","");
     }
-
-    public String getName() {
-        return name;
+    
+    public User(String name, String telNo, String email){
+    	this.name = name;
+    	this.telNo = telNo;
+    	this.email = email;
     }
-
-    public String getCardNumber() {
-        return cardNumber;
+    
+    //Getter
+    public String getName(){
+    	return name;
     }
-
-    public double getBalance() {
-        return balance;
+    
+    public String getTelNo(){
+    	return telNo;
     }
-
-    public void deductBalance(double amount) {
-        if (amount <= balance) {
-            balance -= amount;
-        }
+    
+    public String getEmail(){
+    	return email;
     }
-
-    public boolean canAfford(double amount) {
-        return amount <= balance;
+    
+    //setter
+    public void setName(String name){
+    	this.name = name;
     }
-
-    // Get card number from user input
-    private String getCardNumberFromUser() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter credit card number: ");
-        return scanner.nextLine();
+    
+    public void setTelNo(String telNo){
+    	this.telNo = telNo;
     }
+    
+    public void setEmail(String email){
+    	this.email = email;
+    }
+    
+    //ToString
+    @Override
+    public String toString(){
+    	return "Name : " + name + ", TelNo : " + telNo + ", Email: " + email;	
+    }
+    
+    //equals method
+     public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        User user = (User) obj;
+        return Objects.equals(name, user.name) &&
+               Objects.equals(telNo, user.telNo) &&
+               Objects.equals(email, user.email);
+    }
+    
+    // Abstract method for login validation
+    public abstract boolean loginValidation(List<? extends User> users, String id, String pw);
 }
