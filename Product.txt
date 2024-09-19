@@ -1,0 +1,10 @@
+| P0001             | HP Printer            | 225.00                    | 30                        | Suitable for home and office use                |
+| P0002             | Dell Host computer    | 2250.00                   | 34                        | High-performance desktop systems                |
+| P0003             | Dell Laptop           | 1180.00                   | 40                        | High-end professional and gaming options.       |
+| P0004             | LG Monitor            | 1200.00                   | 22                        | High-quality displays with various sizes        |
+| P0005             | Acer Laptop           | 1575.00                   | 54                        | Balance of performance and portability          |
+| P0006             | Logitech Mouse        | 45.00                     | 90                        | Comfort and responsiveness.                     |
+| P0007             | Logitech Keybroad     | 90.00                     | 60                        | Durable keyboards for both office and gaming    |
+| P0008             | ROG Desktop (set)     | 15750.00                  | 10                        | High-performance gaming desktops                |
+| P0009             | Lenova Laptop         | 1900.00                   | 31                        | Strong durability and security features.        |
+| P0010             | Asus Desktop          | 2700.00                   | 23                        | Provide performance and upgradeability.         |
